@@ -1,22 +1,33 @@
-import { useParams } from "react-router-dom";
 import { transactions } from '../data/transactions';
 
 export const TransactionDetail = () => {
-    const {id} = useParams();
-    const transaction = transactions.find(t => t.id === Number(id));
-    
-    if (!transaction) {
-        return <p>データがありません。</p>;
-    }
-
-        return (
+    return (
         <div>
-            <h1>取引詳細</h1>
-            <p>ID: {transaction.id}</p>
-            <p>内容: {transaction.title}</p>
-            <p>金額: {transaction.amount}</p>
-            <p>保有金融機関: {transaction.paymentMethod}</p>
-            <p>入出金: {transaction.type}</p>
-        </div>
+            <h1>入出金一覧（詳細）</h1>
+
+        <table border={1}>
+        <thead>
+            <tr>
+                <th>日付</th>
+                <th>内容</th>
+                <th>金額</th>
+                <th>金融機関</th>
+                <th>入出金</th>
+            </tr>
+        </thead> 
+        
+        <tbody>
+            {transactions.map((t) => (
+                <tr key={t.id}>
+                    <td>{t.date}</td>
+                    <td>{t.title}</td>
+                    <td>{t.amount}円</td>
+                    <td>{t.paymentMethod}</td>
+                    <td>{t.type}</td>
+            </tr>
+        ))}
+        </tbody>
+        </table>
+    </div>
     );
 };
