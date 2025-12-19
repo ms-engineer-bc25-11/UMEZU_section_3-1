@@ -5,6 +5,8 @@ import { Form } from "../components/Form";
 export const Transactions = () => {
   return (
     <div className="container">
+      <Form />
+
       <h1>入出金一覧</h1>
 
       <div className="table-wrapper">

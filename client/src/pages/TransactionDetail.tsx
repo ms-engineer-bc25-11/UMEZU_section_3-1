@@ -11,7 +11,7 @@ export const TransactionDetail = () => {
                 <th>日付</th>
                 <th>内容</th>
                 <th>金額</th>
-                <th>金融機関</th>
+                <th>支払い元</th>
                 <th>入出金</th>
             </tr>
         </thead> 

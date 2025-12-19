@@ -1,20 +1,21 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
+  margin-top: 0 auto;
   padding: 2rem;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+}
 .main-nav {
   display: flex;
-  justify-content: center;
   gap: 32px;
   font-size: 1.25rem;
   text-transform: uppercase;
-  padding: 0;
   margin-top: 34px;
   list-style: none;
 }
-
 .container {
   text-align: left;
 }
@@ -29,14 +30,6 @@
 
 th, td {
   padding: 8px 12px;
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
 
 
